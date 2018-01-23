@@ -426,7 +426,7 @@ class BGAPIBackend(BLEBackend):
 
         self.expect(ResponsePacketType.attclient_find_information)
         self.expect(EventPacketType.attclient_procedure_completed,
-                    timeout=10)
+                    timeout=30)
 
         for char_uuid_str, char_obj in (
                 self._characteristics[connection_handle].items()):
